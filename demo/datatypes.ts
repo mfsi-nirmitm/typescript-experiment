@@ -116,3 +116,21 @@ canBeNull = null;
 let canAlsoBeNull = null; // type is null
 // canAlsoBeNull =12; // will give error 
 
+// Question  //////////////////////////////////////////
+
+let bankAccount = {
+	money: 2000,
+	deposit(value) {
+		this.money += value;
+	}
+};
+
+let myself = {
+	name : "Max",
+	bankAccount : bankAccount,
+	hobbies : ["Sports","Cooking"] 
+};
+
+myself.bankAccount.deposit(300);
+
+console.log(myself);
