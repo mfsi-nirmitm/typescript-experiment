@@ -32,3 +32,65 @@ var car = "BMW";
 console.log(car);
 car = { brand: "bmw", series: 3 };
 console.log(car);
+// functions
+function returnMyName() {
+    return 'nirmit'; // return myAge; will give error
+}
+console.log(returnMyName());
+// void
+function sayHello() {
+    console.log("Hello!");
+}
+// argument typescript
+function multiply(value1, value2) {
+    return value1 * value2;
+}
+console.log(multiply(2, 3));
+// function types
+var myMultiply;
+//myMultiply = sayHello; // will give error
+//myMultiply(); // will give error 
+myMultiply = multiply;
+console.log(myMultiply(2, 3));
+// objects
+var userData = {
+    name: 'Max',
+    age: 27
+};
+/*userData = {
+    a: "Hello",
+    b: 22
+}; */ // will give error
+// complex object
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+var complex2 = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+// union types
+var myRealRealAge = 27;
+myRealRealAge = "27";
+//myRealRealAge = true; // will give error
+// check types 
+var finalValue = "A string";
+if (typeof finalValue == "string") {
+    console.log("final value is string");
+}
+// never 
+function neverReturns() {
+    throw new Error('An error!');
+}
+// Nullable Types
+var canBeNull = 12;
+canBeNull = null;
+var canAlsoBeNull = null; // type is null
+// canAlsoBeNull =12; // will give error 
+
+
