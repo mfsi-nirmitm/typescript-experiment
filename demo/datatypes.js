@@ -104,3 +104,4 @@ var myself = {
 };
 myself.bankAccount.deposit(300);
 console.log(myself);
+//# sourceMappingURL=datatypes.js.map
