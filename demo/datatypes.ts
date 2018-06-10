@@ -136,3 +136,34 @@ let myself : {name: string, bankAccount: BankAccount, hobbies: string[]} = {
 myself.bankAccount.deposit(300);
 
 console.log(myself);
+
+//////////////////////////
+
+// Rest $ Spread
+console.log("REST & SPREAD");
+const numbers = [1,10,99,-5];
+console.log(Math.max(33,99,10,-3));
+console.log(Math.max(...numbers));
+
+function makeArray(name: string, ...args: number[]){
+	name = 'string';
+	return args;
+}
+console.log(makeArray("Max",1,2,6));
+
+// Destructuring
+console.log("Destructuring");
+const myHobbies = ["Cookies","Sports"];
+const [hoby1,hoby2] = myHobbies;
+console.log(hoby1,hoby2);
+
+const userData1 = {userName: "Max", age:27};
+const {userName: myName, age:myAge1} = userData1;
+console.log(myName,myAge1);
+
+// Template Literals
+const userName = "Max";
+const greeting = `This is a heading!
+I'm ${userName}.
+This is cool!`;
+console.log(greeting);

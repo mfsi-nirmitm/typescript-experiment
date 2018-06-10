@@ -104,4 +104,31 @@ var myself = {
 };
 myself.bankAccount.deposit(300);
 console.log(myself);
+//////////////////////////
+// Rest $ Spread
+console.log("REST & SPREAD");
+var numbers = [1, 10, 99, -5];
+console.log(Math.max(33, 99, 10, -3));
+console.log(Math.max.apply(Math, numbers));
+function makeArray(name) {
+    var args = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        args[_i - 1] = arguments[_i];
+    }
+    name = 'string';
+    return args;
+}
+console.log(makeArray("Max", 1, 2, 6));
+// Destructuring
+console.log("Destructuring");
+var myHobbies = ["Cookies", "Sports"];
+var hoby1 = myHobbies[0], hoby2 = myHobbies[1];
+console.log(hoby1, hoby2);
+var userData1 = { userName: "Max", age: 27 };
+var myName = userData1.userName, myAge1 = userData1.age;
+console.log(myName, myAge1);
+// Template Literals
+var userName = "Max";
+var greeting = "This is a heading!\nI'm " + userName + ".\nThis is cool!";
+console.log(greeting);
 //# sourceMappingURL=datatypes.js.map
