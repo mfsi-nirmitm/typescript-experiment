@@ -4,9 +4,18 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE-edge" >
 		<title>TypeScript</title>
-		<script src="namespace.js"></script>
+		<script src="node_modules/systemjs/dist/system.js"></script>
 	</head>
 	<body>
-	
+		<script>
+			// set our baseURL reference path
+			SystemJS.config({
+				baseURL : '/',
+				defaultJSExtensions:true
+			});
+			
+			// loads /js/main.js
+			SystemJS.import('math.js');
+		</script>
 	</body>
 </html>
